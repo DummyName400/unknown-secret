@@ -34,14 +34,19 @@ enum Etype {
 
 
 
-//Tower
+//Tower--
 struct Tower
 {
 	int TW; //Tower width
 	int TL; //Tower Height
-	int Health;
+	double Health;       //TowerHealth
+	int TowerKillingCapacity; //TowerKillingCapacity
+	double TowerFirePower;    //TowerFirePower
+	double UnpavedArea;       //UnpavedArea
+	Tower* next;              //pointer used for linked list construction
 };
 
+//castle--
 struct castle
 {
 	//starting x,y
@@ -52,14 +57,20 @@ struct castle
 	Tower towers[4];	//Castle has 4 towers
 };
 
+//Enemy--
 struct enemy
 {
 	
-	int ID;			//Each enemy has a unique ID (sequence number)
-	REGION Region;	//Region of this enemy
-	int Distance;	//Distance to the castle
-	float Health;	//Enemy health
-	Etype Type;		//PVR, FITR, SHLD_FITR
+	int ID;			  //Each enemy has a unique ID (sequence number)
+	Etype Type;		  //PVR, FITR, SHLD_FITR
+	int ArrivalTime;  //Enemy's Arrival time
+	double Health;    //Enemy health
+	double FirePower; //Enemy Fire Power
+	int ReloadPeriod; //Enmey Reload Period
+	REGION Region;	  //Region of this enemy
+	int Distance;	  //Distance to the castle	
+	enemy* next;      //pointer used for linked list construction
+
 };
 
 //Functions Prototype
@@ -87,4 +98,3 @@ void DrawEnemies(enemy* enemies[],int size);
 
 /*Student use this function to print his/her message*/
 void PrintMsg(char*msg);
-

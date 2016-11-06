@@ -85,11 +85,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Demo.cpp" />
-    <ClCompile Include="InputLogic.cpp" />
+    <ClCompile Include="enemyLinkedList.cpp" />
+    <ClCompile Include="file_IO.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="towerLinkedList.cpp" />
     <ClCompile Include="utility.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="InputLogic.h" />
+    <ClInclude Include="enemyLinkedList.h" />
+    <ClInclude Include="file-IO.h" />
+    <ClInclude Include="towerLinkedList.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
