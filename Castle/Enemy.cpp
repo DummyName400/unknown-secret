@@ -30,3 +30,18 @@ bool InsertEnemy(enemy*& enemyH,int ID, Etype TYP,
 	}
 	return false;
 }
+void PrintEnemy(enemy*head) {
+	cout << "Enemy list is : "<<endl;
+	while (head != NULL) {
+		cout << head->ID << " ";
+		cout << head->Type << " ";
+		cout << head->ArrivalTime << " ";
+		cout << head->Health << " ";
+		cout << head->FirePower << " ";
+		cout << head->ReloadPeriod<< " ";
+		cout << head->Region << " ";
+		cout<<endl;
+		head = head->next;
+	}
+	cout << endl;
+}

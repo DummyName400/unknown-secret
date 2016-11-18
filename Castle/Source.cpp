@@ -35,6 +35,32 @@ int main()
 	enemy* regFigthersHead = NULL; enemy* SHFighterHead = NULL;
 	double Constants[3];
 	LoadFile(Constants,TowerHead, regFigthersHead,SHFighterHead);
+	/*
+	required functions to implement
+	------------------------------
+	void moveFromTo(enemy* list1,enemy * list2)
+		moves the first element from the first list to the end of the other
+		should be in the Enemy.cpp folder
+	
+	void selectAndKill(enemy* list1, enemy* list2,enemy* list3)
+		pick the first (2 or less) elements from the list1 and list2 
+		call moveFromTo() to move selected enemies from list1/2 to list3
+		should be in the Tower.cpp foldeer
+
+	void printEnemyByRegion(enemy* active1,enemy* active 2 ,enemy* dead)
+		For each region, print
+			1. Total number of active enemies and information of each one of them.
+			2. Total number of killed enemies and information of each one of them.
+			The killed enemies have to be printed ordered by enemy health.
+	required steps to Implement
+	---------------------------
+	Loop through those steps
+		Check if any enemy's arrival time matches the current one
+			if matches call moveFromTo() to move to active list
+		call selectAndKill()
+		call printEnemyByRegion()  on active lists and dead list
+
+	*/
 
 	//TEST------------------------------
 	
