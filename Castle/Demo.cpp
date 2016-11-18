@@ -3,7 +3,7 @@ using namespace std;
 
 
 #include "utility.h"
-
+/*
 //This is a demo program to test utlity function given in utlity.h/.cpp
 int main()
 {
@@ -93,3 +93,4 @@ int main()
 	
 	return 0;
 }
+*/

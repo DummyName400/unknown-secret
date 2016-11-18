@@ -1,7 +1,6 @@
-#include "file-IO.h"
-void LoadFile(double* Con , Tower*&THead , enemy*&PH , enemy*&FH, enemy*& SFH)
+#include "file_IO.h"
+void LoadFile(double* Con,Tower*&THead ,enemy*&regHead,enemy* &SFH)
 {
-
 	int Index, T, ArrivalTime, ReloadPeriod, TowerHit;
 	double Health, FirePower, TowerHealth, TowerFireP; char R;
 	Etype Type; REGION Region;
@@ -29,31 +28,22 @@ void LoadFile(double* Con , Tower*&THead , enemy*&PH , enemy*&FH, enemy*& SFH)
 		input>>T >> ArrivalTime >> Health >> FirePower >> ReloadPeriod >> R;
 		Type = static_cast<Etype>(T);
 		Region = static_cast<REGION>(R);
-		
-		if (Type == PVR) {
-			if (!InsertEnemy(PH, Index, Type, ArrivalTime
-				, Health, FirePower, ReloadPeriod, Region)) {
-				cout << "Error while inserting an Paver node, check insert enemy function " << endl;
-				return;
-			}
-		}
-
-		else if (Type == FITR) {
-			if (!InsertEnemy(FH, Index, Type, ArrivalTime,
-				Health, FirePower, ReloadPeriod, Region)) {
-				cout << "Error while inserting a Fighter node, check insert enemy function " << endl;
-				return;
-			}
-		}
-
-		else if (Type == SHLD_FITR) {
+		//put all shield fighters in one list
+		if (Type == SHLD_FITR) {
 			if (!InsertEnemy(SFH, Index, Type, ArrivalTime
 				, Health, FirePower, ReloadPeriod, Region)) {
 				cout << "Error while inserting a Shielded Fighter node, check insert enemy function " << endl;
 				return;
 			}
 		}
-
+		//put all other regular fighters in a single list
+		else{
+			if (!InsertEnemy(regHead, Index, Type, ArrivalTime
+				, Health, FirePower, ReloadPeriod, Region)) {
+				cout << "Error while inserting an Paver node, check insert enemy function " << endl;
+				return;
+			}
+		}
 		input >> Index;
 	}
 	input.close();
