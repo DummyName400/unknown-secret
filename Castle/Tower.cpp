@@ -28,3 +28,16 @@ bool InsertTower(Tower* &towerH, double TH, int TKC , double FP)
 
 	return false;
 }
+/*
+pick the first (2 or less) elements from the list1 and list2 
+		call moveFromTo() to move selected enemies from list1/2 to list3
+		should be in the Tower.cpp foldeer
+*/
+void selectAndKill(enemy* active1, enemy* active2,enemy* dead){
+	for(int i=0;i<2&&active1!=NULL;i++)
+		moveFromTo(active1,dead);
+	for(int i=0;i<2&&active2!=NULL;i++)
+		moveFromTo(active2,dead);
+
+}
+		
