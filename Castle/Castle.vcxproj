@@ -84,7 +84,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Demo.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="File_IO.cpp" />
     <ClCompile Include="Source.cpp" />

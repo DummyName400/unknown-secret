@@ -1,7 +1,7 @@
 #include "file_IO.h"
 
 void PrintEnemy(enemy*head) {
-	cout << "list is : ";
+	cout << "Enemy list is : "<<endl;
 	while (head != NULL) {
 		cout << head->ID << " ";
 		cout << head->Type << " ";
@@ -10,13 +10,14 @@ void PrintEnemy(enemy*head) {
 		cout << head->FirePower << " ";
 		cout << head->ReloadPeriod<< " ";
 		cout << head->Region << " ";
+		cout<<endl;
 		head = head->next;
 	}
 	cout << endl;
 }
 
 void PrintTower(Tower*head) {
-	cout << "list is : " << endl;
+	cout << "Tower list is : " << endl;
 	while (head != NULL) {
 		cout << head->Health << " ";
 		cout << head->TowerKillingCapacity << " ";
@@ -29,6 +30,7 @@ void PrintTower(Tower*head) {
 }
 int main()
 {
+	cout<<"start working"<<endl;
 	Tower* TowerHead = NULL; 
 	enemy* regFigthersHead = NULL; enemy* SHFighterHead = NULL;
 	double Constants[3];
