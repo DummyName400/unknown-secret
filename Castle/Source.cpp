@@ -28,6 +28,7 @@ void PrintTower(Tower*head) {
 	}
 	cout << endl;
 }
+
 int main()
 {
 	cout<<"start working"<<endl;
@@ -40,12 +41,12 @@ int main()
 	------------------------------
 	void moveFromTo(enemy* list1,enemy * list2)
 		moves the first element from the first list to the end of the other
-		should be in the Enemy.cpp folder
+		should be in the Enemy.cpp 
 	
 	void selectAndKill(enemy* list1, enemy* list2,enemy* list3)
 		pick the first (2 or less) elements from the list1 and list2 
 		call moveFromTo() to move selected enemies from list1/2 to list3
-		should be in the Tower.cpp foldeer
+		should be in the Tower.cpp 
 
 	void printEnemyByRegion(enemy* active1,enemy* active 2 ,enemy* dead)
 		For each region, print
