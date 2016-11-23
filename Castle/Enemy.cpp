@@ -52,5 +52,34 @@ For each region, print
 			2. Total number of killed enemies and information of each one of them.
 			The killed enemies have to be printed ordered by enemy health.
 */
-void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead);
+void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead){
+	printRegion(active1,A_REG);
+	printRegion(active1,B_REG);
+	printRegion(active1,C_REG);
+	printRegion(active1,D_REG);
+	printRegion(active2,A_REG);
+	printRegion(active2,B_REG);
+	printRegion(active2,C_REG);
+	printRegion(active2,D_REG);
+	printRegion(dead,A_REG);
+	printRegion(dead,B_REG);
+	printRegion(dead,C_REG);
+	printRegion(dead,D_REG);
 
+}
+
+void printRegion(enemy * list,REGION region){
+	while(list!=NULL){
+		if(list->Region==region){
+			cout << list->ID << " ";
+			cout << list->Type << " ";
+			cout << list->ArrivalTime << " ";
+			cout << list->Health << " ";
+			cout << list->FirePower << " ";
+			cout << list->ReloadPeriod<< " ";
+			cout << list->Region << " ";
+			cout<<endl;
+		}
+		list=list->next;
+	}
+}
